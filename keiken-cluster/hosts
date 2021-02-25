@@ -1,6 +1,6 @@
 [kubernetes_master_nodes]
-master.young.com ansible_host=172.31.0.5
+ip-172-31-0-5.us-east-2.compute.internal ansible_host=172.31.0.5
 
 [kubernetes_worker_nodes]
-worker01.young.com ansible_host=172.31.0.6
-worker02.young.com ansible_host=172.31.0.7
+ip-172-31-0-6.us-east-2.compute.internal ansible_host=172.31.0.6
+ip-172-31-0-7.us-east-2.compute.internal ansible_host=172.31.0.7
