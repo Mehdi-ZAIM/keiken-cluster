@@ -26,7 +26,7 @@
      yum install firewalld -y --skip-broken
      yum install -y yum-utils device-mapper-persistent-data lvm2 --skip-broken
      dnf config-manager --add-repo=https://download.docker.com/linux/centos/docker-ce.repo
-     dnf install docker-ce-3:18.09.1-3.el7 --nobest -y --allowerasing
+     dnf install docker-ce-3:18.09.1-3.el7 -y 
   
   - name: Installing required packages
     yum:
