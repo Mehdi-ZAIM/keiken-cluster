@@ -10,8 +10,12 @@
     shell: kubeadm init --apiserver-advertise-address {{ad_addr}} --pod-network-cidr={{cidr_v}}
     register: output
 
+  - name: generate token file 
+    shell: kubeadm token create --print-join-command
+    register: join-command
+
   - name: Storing Logs and Generated token for future purpose.
-    local_action: copy content={{ output.stdout }} dest={{ token_file }}
+    local_action: copy content={{ join-command.stdout_lines[0] }} dest={{ token_file }}
 
   - name: Copying required files
     shell: |
