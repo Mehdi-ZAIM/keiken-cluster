@@ -1,0 +1,3 @@
+---
+- import_playbook: playbooks/settingup_kubernetes_components.yml
+

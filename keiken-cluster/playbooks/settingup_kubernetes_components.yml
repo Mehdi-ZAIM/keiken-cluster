@@ -1,0 +1,15 @@
+---
+- hosts: kubernetes_worker_nodes
+
+  tasks:
+  - name: Create Secret
+    shell: kubectl apply -f mysql-secret.yml
+
+  tasks:
+  - name: Create Msql Deployment
+    shell: kubectl apply -f mysql-deployment.yml
+
+  tasks:
+  - name: Create Apache Deployment
+    shell: kubectl apply -f apache-deployment.yml
+
